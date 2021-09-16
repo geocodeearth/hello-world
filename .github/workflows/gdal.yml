@@ -1,0 +1,14 @@
+name: gdal
+on:
+  push:
+    paths:
+      - 'gdal/**'
+jobs:
+  compile:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install gdal via brew
+        run: brew install gdal
+      - name: Compile and runs-on
+        run: cd gdal && make run
