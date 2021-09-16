@@ -1,0 +1,11 @@
+name: s2geometry
+on: push
+jobs:
+  compile:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install s2geometry via brew
+        run: brew install s2geometry
+      - name: Compile and runs-on
+        run: cd s2geometry && make run
