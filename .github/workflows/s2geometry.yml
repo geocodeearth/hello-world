@@ -1,5 +1,8 @@
 name: s2geometry
-on: push
+on:
+  push:
+    paths:
+      - 's2geometry/**'
 jobs:
   compile:
     runs-on: macos-latest

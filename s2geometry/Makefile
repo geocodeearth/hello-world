@@ -4,8 +4,8 @@ CXX=g++
 CXXFLAGS=-std=c++17 -stdlib=libc++ -I ${S2_ROOT_DIR}/include
 LDFLAGS=-L ${S2_ROOT_DIR}/lib
 LDLIBS=-ls2
-OBJS=s2demo.cpp
-BIN=s2demo
+OBJS=s2_demo.cpp
+BIN=s2_demo
 
 build: $(OBJS)
 	$(CXX) $(LDLIBS) $(LDFLAGS) $(CXXFLAGS) -o ${BIN} $(OBJS)
